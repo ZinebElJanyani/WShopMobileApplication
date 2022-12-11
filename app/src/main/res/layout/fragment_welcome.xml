@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/section_top"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@drawable/half_rounded">
+
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Be unique\n With your own style"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:textColor="#FFF"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="18dp"
+                android:background="@drawable/bg_search"
+                android:layout_below="@id/textTitle"/>
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitEnd"
+                android:src="@drawable/girl_welcomef" />
+        </RelativeLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:layout_marginTop="125dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_search"
+                android:gravity="center_vertical"
+                android:elevation="50dp">
+
+                <androidx.appcompat.widget.SearchView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:queryHint="Search"
+
+                    app:queryBackground="@android:color/transparent"/>
+            </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="500dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/section_top"
+            android:layout_marginBottom="20dp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="12dp"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/header_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#DAB12015"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:layout_marginBottom="-3.5dp"
+                android:text="The Best Offers"
+                android:fontFamily="casual"
+
+                 />
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/sliderWelcome"
+                android:layout_width="match_parent"
+                android:layout_height="460dp"
+
+                android:layout_marginTop="-25dp"
+                app:iss_auto_cycle="true"
+                app:iss_period="1000"
+                app:iss_delay="0"
+                app:iss_placeholder="@drawable/placeholder"
+                app:iss_error_image="@drawable/error"
+                />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </RelativeLayout>
+</FrameLayout>
